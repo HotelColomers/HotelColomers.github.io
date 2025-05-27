@@ -350,3 +350,44 @@ footer {
     padding: 1em;
 }
 
+
+/* Estils per mòbils: pantalles menors de 768px */
+@media screen and (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carroussel {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .text {
+    padding: 1em;
+  }
+
+  .fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  nav img {
+    width: 30%;
+    position: static;
+    margin: auto;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto;
+  }
+}
