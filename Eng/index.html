@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hotel Colomers</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <!-- Header con selector de idioma -->
+    <header>
+        <div class="logo"><h4>Hotel Colomers</h4></div>
+        <nav>
+            <a href="#about" data-key="menu-about">¿Quiénes somos?</a>
+            <a href="#rooms" data-key="menu-rooms">Habitaciones</a>
+            <a href="#contact" data-key="menu-contact">Contacto</a>
+            <select id="language-select">
+                <option value="HotelColomers-ES.html">ESP</option>
+                <option value="HotelColomers-CAT.html">CAT</option>
+                <option value="HotelColomers-ENG.html" selected>ENG</option>
+            </select>
+
+            <script>
+                // Quan canvia la selecció
+                document.getElementById('language-select').addEventListener('change', function() {
+                    // Obtenim la URL seleccionada
+                    var selectedPage = this.value;
+                    // Redirigim a la pàgina corresponent
+                    window.location.href = selectedPage;
+                });
+            </script>
+        </nav>
+    </header>
+
+    <!-- Portada -->
+    <section class="hero" id="home">
+        <h1 data-key="hero-title">Welcome to</h1> 
+        <h4 class="hover-zoom"> Hotel Colomers</h4>
+        <p data-key="hero-subtitle">Where nature and peace go hand in hand.</p>
+    </section>
+
+    <!-- Introducción -->
+    <section class="section" id="about">
+        <h2 data-key="about-title">Who are we?</h2>
+        <p data-key="about-text">
+           Located in the heart of the Pyrenees, Hotel Colomers is a charming retreat where nature and tranquility go hand in hand. Inspired by traditional mountain architecture and surrounded by spectacular landscapes, our hotel offers a warm, welcoming, and authentic stay. With rooms offering beautiful views and a friendly, family atmosphere that will make you feel at home, Hotel Colomers is the perfect starting point to explore the Aran Valley and enjoy an unforgettable summer experience.
+        </p>
+    </section>
+
+    <!-- Habitaciones -->
+    <section class="section" id="rooms">
+        <h2 data-key="rooms-title">Our bedrooms</h2>
+        <div class="rooms">
+            <div class="room-card">
+                <img src="img/habitacio1.jpg" alt="Doble estándard" />
+                <h3 data-key="room1-title">Double standard</h3>
+                <p data-key="room1-desc">A cosy space to relax after a day in the mountains. Comfort and functionality in a warm atmosphere.</p>
+                <p1>From €60 per night</p1>
+            </div>
+            <div class="room-card">
+                <img src="img/habitacio2.jpg" alt="Suite" />
+                <h3 data-key="room2-title">Suite</h3>
+                <p data-key="room2-desc">Spacious and elegant, designed for a special stay. Offers indoor jacuzzi and superior comfort in a mountain setting.</p>
+                <p1>From €75 per night</p1>
+            </div>
+            <div class="room-card">
+                <img src="img/habitacio_terrassa.jpg" alt="Doble con terraza" />
+                <h3 data-key="room3-title">Double with terrace</h3>
+                <p data-key="room3-desc">Private terrace with panoramic views of the natural surroundings. An ideal spot to breathe fresh air and unwind.</p>
+                <p1>From €70 per night</p1>
+            </div>
+            <div class="room-card">
+                <img src="img/habitacio3.png" alt="Doble con vistas" />
+                <h3 data-key="room3-title">Double with views</h3>
+                <p data-key="room3-desc">Enjoy breathtaking mountain views from your room. Perfect for waking up to unique landscapes.</p>
+                <p1>From €65 per night</p1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de fotos -->
+    <section class="section" id="gallery">
+        <h2 data-key="gallery-title">Photo gallery</h2>
+
+        <div class="slider-fade">
+            <div class="slide fade">
+                <img src="img/foto0.jpg" alt="Foto 0">
+            </div>
+            <div class="slide fade">
+                <img src="img/foto1.jpg" alt="Foto 1">
+            </div>
+            <div class="slide fade">
+                <img src="img/foto2.jpg" alt="Foto 2">
+            </div>
+            <div class="slide fade">
+                <img src="img/foto3.jpg" alt="Foto 3">
+            </div>
+            <div class="slide fade">
+                <img src="img/foto15.jpg" alt="Foto 4">
+            </div>
+            <div class="slide fade">
+                <img src="img/foto16.jpg" alt="Foto 5">
+            </div>
+            <div class="slide fade">
+                <img src="img/foto17.jpg" alt="Foto 6">
+            </div>
+            <div class="slide fade">
+                <img src="img/foto18.jpg" alt="Foto 7">
+            </div>
+             <div class="slide fade">
+                <img src="img/foto20.jpg" alt="Foto 8">
+            </div>
+            <div class="slide fade">
+                <img src="img/foto21.jpg" alt="Foto 9">
+            </div>
+            <div class="slide fade">
+                <img src="img/foto22.jpg" alt="Foto 10">
+            </div>
+    </section>
+
+
+
+
+    <!-- Servicios -->
+    <section class="section" id="services">
+        <h2 data-key="gallery-title">Services</h2>
+        <div class="icones">
+            <div class="servei">
+                <img src="icons/icona_wifi-white.png" alt="Wifi" class="icona">
+                <p>Free WI-FI</p>
+            </div>
+            <div class="servei">
+                <img src="icons/icona_esmorzar-white.png" alt="Pizza" class="icona">
+                <p>Breakfast included</p>
+            </div>
+            <div class="servei">
+                <img src="icons/icona_bar-white.png" alt="Bar" class="icona"> 
+                <p>Bar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <footer id="contact">
+        <p>📍 
+            <a href="https://www.google.com/maps/place/Hotel+Colomers/@42.706747,0.903235,17z/data=!3m1!4b1!4m9!3m8!1s0x12a8bd44b992624b:0xa9ee2b168892cce0!5m2!4m1!1i2!8m2!3d42.706747!4d0.903235!16s%2Fg%2F1ynnq3hsw?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+            Mòla de Salardú, 8, 25598 Salardú, Lleida
+            </a>
+        </p>
+
+        <p>📞 
+            <a href="tel:+34 679 166 631">+34 679 166 631</a>
+        </p>
+
+        <p>📧 
+            <a href="mailto:hotelcolomerssalardu@gmail.com?subject=Reserva%20de%20habitaci%C3%B3n&body=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20habitaciones.">
+            hotelcolomerssalardu@gmail.com
+            </a>
+
+        <p>📷
+            <a href="https://www.instagram.com/hotelcolomers/">@hotelcolomers</a>
+        </p>
+    <p>🎥
+            <a href="https://www.tiktok.com/@hotel.colomers">hotel.colomers</a>
+        </p>
+
+        <p>© 2025 Hotel Colomers. All rights reserved.</p>
+    </footer>
+
+    <!-- JS para cambiar idioma -->
+    <script src="script.js"></script>
+</body>
+</html>
