@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins;
+    font-weight: 300;
+    color: #333;
+    background-color: #f4d5c0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5c2a2b;
+    padding: 1rem 2rem;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #d4af37;
+}
+
+#language-select {
+    margin-left: 1rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Hero */
+.logo h4{
+    font-family: Imperial Script;
+    font-size: 30px;
+}
+
+.hero h4{
+    font-family: Imperial Script;
+    font-size: 8rem;
+    margin-bottom: 1rem;
+    font-weight: lighter;
+    text-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.hero {
+    background: url('img/fons.jpg') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0rem;
+    font-weight: regular;
+    text-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+      background-color: #5c2a2b;
+      border-radius: 20px;
+      text-align: center;
+      width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover-zoom {
+    display: inline-block; /* necesario para que funcione bien el transform */
+    font-size: 24px;
+    transition: transform 0.3s ease; /* transición suave */
+    cursor: default; /* para que se vea que es interactivo */
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1); /* amplía el texto un 10% */
+}
+
+
+/* Section */
+.section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #5c2a2b;
+}
+
+/* Rooms */
+.rooms {
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.room-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+.room-card img {
+    width: 100%;
+    height: auto;
+}
+
+.room-card h3, .room-card p {
+    margin: 1rem;
+}
+
+.room-card p1 {
+    font-size: 13px;
+     margin: 1rem;
+     font-style: italic;
+}
+
+/* Gallery */
+/* Galería de fotos */
+/* Galería de fotos */
+#gallery {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4d5c0;
+}
+
+.slider-fade {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slider-fade .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fadeAnimation 16s infinite;
+}
+
+.slider-fade .slide:nth-child(1) {
+    animation-delay: 0s;
+}
+.slider-fade .slide:nth-child(2) {
+    animation-delay: 4s;
+}
+.slider-fade .slide:nth-child(3) {
+    animation-delay: 8s;
+}
+.slider-fade .slide:nth-child(4) {
+    animation-delay: 12s;
+}
+.slider-fade .slide:nth-child(5) {
+    animation-delay: 16s;
+}
+.slider-fade .slide:nth-child(6) {
+    animation-delay: 20s;
+}
+.slider-fade .slide:nth-child(7) {
+    animation-delay: 24s;
+}
+.slider-fade .slide:nth-child(8) {
+    animation-delay: 28s;
+}
+.slider-fade .slide:nth-child(9) {
+    animation-delay: 32s;
+}
+.slider-fade .slide:nth-child(10) {
+    animation-delay: 36s;
+}
+.slider-fade .slide:nth-child(0) {
+    animation-delay: 40s;
+}
+
+.slider-fade img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* o 'cover' si prefieres */
+    display: block;
+}
+
+/* Animación fade */
+@keyframes fadeAnimation {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; }
+    25%  { opacity: 1; }
+    35%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+
+
+
+/* Services */
+.icones {
+    color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/*Caixa*/
+.servei {
+  background-color: #5c2a2b;
+  border-radius: 20px;
+  padding: 1em;
+  text-align: center;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+/*Icones*/
+.icona {
+  width: 50px;
+  height: auto;
+  margin-top: 15px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #5c2a2b;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+footer a {
+    color: white; /* por ejemplo dorado o el color que quieras */
+    text-decoration: none; /* quita el subrayado */
+     /* opcional: que se vea más claro que es un enlace */
+}
+
+footer a:hover {
+    text-decoration: underline; /* opcional: vuelve a mostrar subrayado al pasar el ratón */
+}
